@@ -1,8 +1,5 @@
 const path = require("path");
-// const HtmlWebPackPlugin = require('html-webpack-plugin');
-//const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-// const webpack = require('webpack');
-
+const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 module.exports = {
   entry: {
     index: "./src/app.js"
@@ -10,9 +7,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    libraryTarget: "umd"
-    // libraryTarget: 'var',
-    //library: 'ReactImagesetClip'
+    chunkFilename: "[name].[chunkhash].bundle.js",
+    filename: "[name].[chunkhash].bundle.js"
   },
   resolve: {
     extensions: [".jsx", ".js"]
@@ -54,5 +50,21 @@ module.exports = {
         use: ["style-loader", "css-loader", "less-loader"]
       }
     ]
+  },
+  optimization: {
+    splitChunks: {
+      chunks: "all",
+      cacheGroups: {
+        vendors: {
+          test: /[\\/]node_modules[\\/]/,
+          name: "vendor"
+          //priority: -10
+        }
+      }
+    },
+    runtimeChunk: {
+      name: "manifest"
+    },
+    minimizer: [new UglifyJsPlugin()]
   }
 };
