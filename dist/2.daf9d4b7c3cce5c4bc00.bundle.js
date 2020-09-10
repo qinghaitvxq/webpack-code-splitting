@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{37:function(n,o,e){"use strict";e.r(o);var t=e(0),a=e.n(t);o.default=function(n){return a.a.createElement("div",null,"I am GoodnightMoon")}}}]);

@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[2],{155:function(t,e,n){"use strict";n.r(e);n(47);var a=n(50),i=n.n(a),s=n(0),p=n.n(s);e.default=function(){return p.a.createElement("div",null," ",p.a.createElement("span",null,"setting settingsettingsetting"),"this is app Setting ",p.a.createElement(i.a,{type:"primary"}," 测试"))}}}]);

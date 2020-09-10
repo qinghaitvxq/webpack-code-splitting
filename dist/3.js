@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{156:function(e,n,t){"use strict";t.r(n);t(47);var a=t(50),i=t.n(a),r=t(0),s=t.n(r);n.default=function(){return s.a.createElement("div",null," ","this is app UserMatchv this is ",s.a.createElement(i.a,{type:"primary"}," 测试"))}}}]);
